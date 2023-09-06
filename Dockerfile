@@ -6,6 +6,6 @@ COPY . .
 
 RUN yarn 
 
-RUN  yarn build
+RUN  yarn tsc
 
 CMD yarn dev
