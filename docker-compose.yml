@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  api:
+    container_name: api
+    restart: always
+    build: .
+    ports:
+      - "4000:5500"
+    depends_on:
+      - db
+    volumes:
+      - .:/usr/src/app
+
+  db:
+    container_name: postgres
+    image: postgres
+    ports:
+      - "5432:${DB_PORT}"
+    volumes:
+      - data:/data/db
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+
+volumes:
+  data: {}
