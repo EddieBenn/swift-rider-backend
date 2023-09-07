@@ -11,7 +11,7 @@ export const db = new Sequelize(
     DB_USER!,
     DB_PASSWORD,
     {
-        host: "localhost",
+        host: "bubble.db.elephantsql.com",
         port: DB_PORT as unknown as number,
         logging: false,
         dialect: "postgres"
