@@ -8,7 +8,7 @@ import adminRouter from './routes/admin';
 import chatRouter from './routes/chat'
 import {db} from './config'
 import cors from "cors";
-import {URL, port} from './config'
+import { port} from './config'
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -39,7 +39,7 @@ app.use('/chat',  chatRouter)
 
 
 app.listen(port, ()=>{
-    console.log(`Server running on ${URL}:${port}`)
+    console.log(`Server running on:${port}`)
 })
 
 export default app;

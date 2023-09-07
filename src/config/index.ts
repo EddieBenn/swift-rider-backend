@@ -37,5 +37,4 @@ export const FromAdminMail = process.env.FromAdminMail as string
 export const userSubject = process.env.userSubject as string
 export const APP_SECRET = process.env.APP_SECRET as string;
 export const Base_Url = process.env.BASE_URL as string;
-export const URL = process.env.URL as string;
 export const port = process.env.PORT || 4000;
